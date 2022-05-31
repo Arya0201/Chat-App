@@ -1,0 +1,18 @@
+<div class="navBar">
+    <div id="logo"></div>
+    <div id="heading"><a routerLink="/">ChatApp</a></div>
+  <div class="links">
+    <span>
+      <a *ngIf="!(User==true)" href="#">Login</a>
+    </span>
+    <span>
+      <a *ngIf="!(User==true)" routerLink="/signup">Sign Up</a>
+    </span>
+    <span>
+      <span id="userEmail" *ngIf="(User==true)">{{userEmail}}</span>
+    </span>
+    <span>
+      <a *ngIf="(User==true)" href="#" (click)="logout()" >Logout</a>
+    </span>
+  </div>
+</div>
